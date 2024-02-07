@@ -41,15 +41,35 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        String nameHero;
-        int xpHero;
+        String nameHero = "";
+        int xpHero = 0;
+        int count = 0;
 
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Olá heroi, qual o seu nome? ");
-        nameHero = scanner.next();
+
+        for(int i = 0; count <= i; i++ ){
+            System.out.println("Olá heroi, qual o seu nome? ");
+            if(scanner.hasNextInt()){
+                scanner.nextInt();
+                
+            }else{
+                nameHero = scanner.next();
+            }
+
+            count++;
+        }
+
         System.out.println("Qual o seu xp? ");
-        xpHero = scanner.nextInt();
+        if(scanner.hasNextInt()){
+            xpHero = scanner.nextInt();
+        }
+        
+
+        
+        
+        
+        
         String msgResult = "O Herói de nome " + nameHero + " está no nível: ";
 
 
